@@ -8,11 +8,19 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style/style.css">
     <style>
-        .login-form {
+        
+
+        .Error_Message {
+            padding: 50px 0;
+            text-align: center;
+            color: red;
+        }
+
+        .login {
             padding: 50px 0;
         }
 
-        .login-form .container {
+        .login .container {
             max-width: 500px;
             margin: 0 auto;
         }
@@ -103,19 +111,31 @@
         </div>
     </div>
 
-    <section class="login-form">
+    <section class="login">
         <div class="container">
+
             <form id="formulario_login">
+
                 <div class="form-group">
                     <label for="email">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
+                    <input type="email" class="form-control" id="email_field" placeholder="Ingresa tu correo electrónico">
                 </div>
+
                 <div class="form-group">
                     <label for="password">Contraseña</label>
-                    <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
+                    <input type="password" class="form-control" id="password_field" placeholder="Ingresa tu contraseña">
                 </div>
+
                 <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
             </form>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+
+        <p id="error_text" class ="Error_Message"> </p>
+
         </div>
     </section>
 
