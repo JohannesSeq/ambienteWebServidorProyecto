@@ -47,8 +47,8 @@
                             Usuario
                         </a>
                         <div class="dropdown-menu" aria-labelledby="usuarioDropdown">
-                            <a class="dropdown-item" href="#" id="login">Iniciar Sesión</a>
-                            <a class="dropdown-item" href="#" id="logout" style="display:none;">Cerrar Sesión</a>
+                            <a class="dropdown-item" href="./pages/login.php" id="login">Iniciar Sesión</a>
+                            <a class="dropdown-item" href="index.php" id="logout" style="display:none;">Cerrar Sesión</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -96,7 +96,7 @@
             <h1 class="display-4">Bienvenido a Restaurante Playa Cacao</h1>
             <p class="lead">Una experiencia culinaria tropical que te encantará.</p>
             <hr class="my-4">
-            <p>Por favor, inicia sesión para acceder a todas las funcionalidades de la plataforma.</p>
+            <p id="Int_message">Por favor, inicia sesión para acceder a todas las funcionalidades de la plataforma.</p>
             <a class="button-62" href="./pages/login.php" role="button" id="loginBtn">Iniciar Sesión</a>
         </div>
     </div>
@@ -157,6 +157,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../script/script_index.js"></script>
+    
+
 
 </body>
 

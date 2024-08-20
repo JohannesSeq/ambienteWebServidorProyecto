@@ -1,5 +1,3 @@
-document.cookie = "email= "; "rol= ";
-
 $(document).ready(function(){
     var failure = false;
     
@@ -24,6 +22,7 @@ $(document).ready(function(){
 
 
                 if(response.startsWith('null')){
+                    clear_cookie();
                     console.log("login error")
                     
                     failure = true;
@@ -32,29 +31,24 @@ $(document).ready(function(){
 
                 } else {
 
-                    console.log("Login was successful!")
-                    
+                    console.log("Login was successful!")   
                     var RawResponse = '';
-                    //var LenghtResponse = response.length;
                     RawResponse = response.slice(1, response.length - 1)
-                    console.log(RawResponse)
-
-
                     var User_Array = RawResponse.split(",");
                     
                     for (let i = 0; i < User_Array.length; i++){
 
                         User_Array[i] = User_Array[i].slice(User_Array[i].indexOf(':') + 1, User_Array[i].length);
                         
-
                         if(User_Array[i].startsWith('"')){
-
                             User_Array[i] = User_Array[i].slice(1, User_Array[i].length - 1);
-
                         }
 
                         console.log(User_Array[i])
                     }
+
+                    write_cookie(User_Array[2],User_Array[4]);
+                    window.location.href = "../index.php";
                 }
 
             }
@@ -71,12 +65,14 @@ function escribir_error(){
 }
 
 function write_cookie(email,rol){
+    document.cookie = "email=  ; path=/";
+    document.cookie = "rol=  ; path=/";
 
-    document.cookie = "email= "; "rol= ";
-    document.cookie = email + "=" + rol + ";";
-
+    document.cookie = "email" + "=" + email + ";" + "path=/" + ";";
+    document.cookie = "rol" + "=" + rol + ";" + "path=/" + ";";
 }
 
-function clear_cookie(username){
-    document.cookie = "email= "; "rol= ";
+function clear_cookie(){
+    document.cookie = "email= ; path=/";
+    document.cookie = "rol= ; path=/";
 }

@@ -46,7 +46,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Restaurante Playa Cacao</a>
+            <a class="navbar-brand" href="../index.php">Restaurante Playa Cacao</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -59,8 +59,8 @@
                             Usuario
                         </a>
                         <div class="dropdown-menu" aria-labelledby="usuarioDropdown">
-                            <a class="dropdown-item" href="#" id="login">Iniciar Sesión</a>
-                            <a class="dropdown-item" href="#" id="logout" style="display:none;">Cerrar Sesión</a>
+                            <a class="dropdown-item" href="login.php" id="login">Iniciar Sesión</a>
+                            <a class="dropdown-item" href="../pages/index.php" id="logout" style="display:none;">Cerrar Sesión</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
