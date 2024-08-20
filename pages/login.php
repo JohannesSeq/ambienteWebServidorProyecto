@@ -105,7 +105,7 @@
 
     <section class="login-form">
         <div class="container">
-            <form>
+            <form id="formulario_login">
                 <div class="form-group">
                     <label for="email">Correo Electrónico</label>
                     <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
@@ -130,9 +130,10 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../script/login.js"></script>
 
 </body>
 

@@ -2,10 +2,10 @@
 include('connection.php');
 
 //Passdown de las variables del JS al backend
-$email = $_GET['email'];
+$correo = $_GET['email'];
 $user_pass = $_GET['user_pass'];
 
-$stmt = $conn->prepare("SELECT * FROM tb_task WHERE email = ? AND user_pass = ?");
+$stmt = $conn->prepare("SELECT * FROM usuario WHERE correo = ? AND user_pass = ?");
 
 $stmt->bind_param("i", $id);
 $stmt->execute();
