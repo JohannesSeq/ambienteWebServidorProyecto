@@ -97,7 +97,7 @@
             <p class="lead">Una experiencia culinaria tropical que te encantará.</p>
             <hr class="my-4">
             <p>Por favor, inicia sesión para acceder a todas las funcionalidades de la plataforma.</p>
-            <a class="button-62" href="#" role="button" id="loginBtn">Iniciar Sesión</a>
+            <a class="button-62" href="./pages/login.php" role="button" id="loginBtn">Iniciar Sesión</a>
         </div>
     </div>
 

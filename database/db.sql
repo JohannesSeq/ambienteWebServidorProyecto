@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS usuario(
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(50),
     correo VARCHAR(50),
+    rol VARCHAR(25),
     user_pass VARCHAR(50)
     
 );
@@ -52,3 +53,9 @@ CREATE TABLE IF NOT EXISTS detalle_pedido(
     FOREIGN KEY(id_producto) REFERENCES usuario(id)
 
 );
+
+INSERT INTO usuario(nombre,correo,rol,user_pass) VALUES 
+
+    ('Johannes','johannes@playacacao.com','Gerente','pass123'),
+    ('Adrian','adrian@playacacao.com','vendedor','pass123'),
+    ('steven','steven@playacacao.com','cliente','pass123');
