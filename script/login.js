@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    var failure = false;
     
     $('#formulario_login').submit(function(e){
         //var errortext = document.getElementById('#error_text');
@@ -42,7 +41,7 @@ $(document).ready(function(){
                     }
 
                     write_cookie(User_Array[2],User_Array[3],User_Array[1]);
-                    window.location.href = "../pages/index.php";
+                    window.location.href = "index.php";
                 }
 
             }

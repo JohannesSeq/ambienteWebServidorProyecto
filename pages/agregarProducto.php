@@ -48,10 +48,10 @@
 
     <section class="inventario-form">
         <div class="container">
-            <form>
+            <form id="Agregar_Producto_Form">
                 <div class="form-group">
-                    <label for="producto">Nombre del Producto</label>
-                    <input type="text" class="form-control" id="producto" placeholder="Ingresa el nombre del producto">
+                    <label for="nombre_producto">Nombre del Producto</label>
+                    <input type="text" class="form-control" id="nombre_producto" placeholder="Ingresa el nombre del producto">
                 </div>
                 <div class="form-group">
                     <label for="categoria">Categoría</label>
@@ -72,10 +72,11 @@
 
     <?php include_once 'footer.php'; ?>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../script/cookie_management.js"></script>
+    <script src="../script/productos.js"></script>
 
 </body>
 
