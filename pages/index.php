@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante Playa Cacao</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
     <style>
         .sobre-nosotros {
             background-color: #f8f9fa;
@@ -47,7 +47,7 @@
                     } else
                         { 
                             echo '<p>Por favor, inicia sesión para acceder a todas las funcionalidades de la plataforma.</p>';
-                            echo '<a class="button-62" href="./pages/login.php" role="button" id="loginBtn">Iniciar Sesión</a>';
+                            echo '<a class="button-62" href="login.php" role="button" id="loginBtn">Iniciar Sesión</a>';
                         }
                 ?>
                 
@@ -101,7 +101,7 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="./script/cookie_management.js"></script>
+        <script src="../script/cookie_management.js"></script>
 
     </body>
 

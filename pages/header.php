@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurante Playa Cacao</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style/style.css">
-</head>
-
 <body>
-
     <header>
+
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Restaurante Playa Cacao</a>
+
+            <a class="navbar-brand" href="index.php">Restaurante Playa Cacao</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -33,7 +23,7 @@
                                         echo '<a class="dropdown-item" href="index.php" id="logout">Cerrar Sesión</a>';
                                 } else
                                     { 
-                                        echo '<a class="dropdown-item" href="./pages/login.php" id="login">Iniciar Sesión</a>';
+                                        echo '<a class="dropdown-item" href="login.php" id="login">Iniciar Sesión</a>';
                                     }
                             ?>
 
@@ -62,9 +52,9 @@
                             'Inventario'.
                         '</a>'.
                         '<div class="dropdown-menu" aria-labelledby="inventarioDropdown">'.
-                            '<a class="dropdown-item" href="#">Agregar Inventario</a>'.
-                            '<a class="dropdown-item" href="#">Modificar Productos</a>'.
-                            '<a class="dropdown-item" href="#">Mostrar Inventario</a>'.
+                            '<a class="dropdown-item" href="agregarFactura.php">Agregar Inventario</a>'.
+                            '<a class="dropdown-item" href="modificarFactura.php">Modificar Productos</a>'.
+                            '<a class="dropdown-item" href="mostarinventario.php">Mostrar Inventario</a>'.
                             '<a class="dropdown-item" href="#">Dashboard de Inventario</a>'.
                             '<a class="dropdown-item" href="#">Gestión de Pedidos</a>'.
                         '</div>'.
@@ -75,10 +65,10 @@
                         'Pedidos'.
                     '</a>'.
                     '<div class="dropdown-menu" aria-labelledby="pedidosDropdown">'.
-                        '<a class="dropdown-item" href="#">Hacer Pedido</a>'.
-                        '<a class="dropdown-item" href="#">Ver Pedidos</a>'.
-                        '<a class="dropdown-item" href="#">Modificar Pedido</a>'.
-                        '<a class="dropdown-item" href="#">Eliminar Pedido</a>'.
+                        '<a class="dropdown-item" href="agregarPedido.php">Hacer Pedido</a>'.
+                        '<a class="dropdown-item" href="Pedidos.php">Ver Pedidos</a>'.
+                        '<a class="dropdown-item" href="modificarPedido.php">Modificar Pedido</a>'.
+                        '<a class="dropdown-item" href="eliminarPedido.php">Eliminar Pedido</a>'.
                     '</div>'.
                 '</li>';
                     } else {
@@ -106,10 +96,10 @@
                                     'Administrar cuentas'.
                                 '</a>'.
                                 '<div class="dropdown-menu" aria-labelledby="PersonalDropdown">'.
-                                    '<a class="dropdown-item" href="#">Agregar Usuario</a>'.
-                                    '<a class="dropdown-item" href="#">Modificar Usuario</a>'.
-                                    '<a class="dropdown-item" href="#">Mostrar Usuarios</a>'.
-                                    '<a class="dropdown-item" href="#">Eliminar Usuario</a>'.
+                                    '<a class="dropdown-item" href="agregarUsuario.php">Agregar Usuario</a>'.
+                                    '<a class="dropdown-item" href="modificarUsuario.php">Modificar Usuario</a>'.
+                                    '<a class="dropdown-item" href="mostrarUsuarios.php">Mostrar Usuarios</a>'.
+                                    '<a class="dropdown-item" href="EliminarUsuarios.php">Eliminar Usuario</a>'.
                                 '</div>'.
                             '</li>';
                         }

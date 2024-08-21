@@ -44,64 +44,7 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="../index.php">Restaurante Playa Cacao</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto" style="margin-right: 100px;">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="usuarioDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Usuario
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="usuarioDropdown">
-                            <a class="dropdown-item" href="login.php" id="login">Iniciar Sesión</a>
-                            <a class="dropdown-item" href="../pages/index.php" id="logout" style="display:none;">Cerrar Sesión</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="facturasDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Facturas
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="facturasDropdown">
-                            <a class="dropdown-item" href="#">Generar Factura</a>
-                            <a class="dropdown-item" href="#">Historial de Facturas</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="pedidosDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Pedidos
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="pedidosDropdown">
-                            <a class="dropdown-item" href="#">Hacer Pedido</a>
-                            <a class="dropdown-item" href="#">Ver Pedidos</a>
-                            <a class="dropdown-item" href="#">Modificar Pedido</a>
-                            <a class="dropdown-item" href="#">Eliminar Pedido</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="inventarioDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Inventario
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="inventarioDropdown">
-                            <a class="dropdown-item" href="#">Agregar Inventario</a>
-                            <a class="dropdown-item" href="#">Modificar Productos</a>
-                            <a class="dropdown-item" href="#">Mostrar Inventario</a>
-                            <a class="dropdown-item" href="#">Dashboard de Inventario</a>
-                            <a class="dropdown-item" href="#">Gestión de Pedidos</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <?php include_once 'header.php'; ?>
 
     <div class="container-fluid mt-3">
         <div class="jumbotron">
@@ -139,16 +82,7 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Restaurante Playa Cacao. Todos los derechos reservados.</p>
-            <p>
-                <a href="#">Aviso de Privacidad</a> |
-                <a href="#">Términos de Servicio</a> |
-                <a href="#">Contáctanos</a>
-            </p>
-        </div>
-    </footer>
+    <?php include_once 'footer.php'; ?>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

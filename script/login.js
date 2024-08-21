@@ -23,15 +23,9 @@ $(document).ready(function(){
 
                 if(response.startsWith('null')){
                     clear_cookie();
-                    console.log("login error")
-                    
-                    failure = true;
                     escribir_error();
-                    //errortext.val('Usuario o contraseña incorrectos.');
-
                 } else {
 
-                    console.log("Login was successful!")   
                     var RawResponse = '';
                     RawResponse = response.slice(1, response.length - 1)
                     var User_Array = RawResponse.split(",");
@@ -48,7 +42,7 @@ $(document).ready(function(){
                     }
 
                     write_cookie(User_Array[2],User_Array[4],User_Array[1]);
-                    window.location.href = "../index.php";
+                    window.location.href = "../pages/index.php";
                 }
 
             }
@@ -59,7 +53,6 @@ $(document).ready(function(){
 });
 
 function escribir_error(){
-    //$('#error_text').val('Usuario o contraseña incorrectos.');
     var paragraph = document.getElementById("error_text");
     paragraph.textContent = 'Usuario o contraseña incorrectos';
 }
