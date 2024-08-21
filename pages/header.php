@@ -42,8 +42,8 @@
                                 'Facturas'.
                             '</a>'.
                             '<div class="dropdown-menu" aria-labelledby="facturasDropdown">'.
-                                '<a class="dropdown-item" href="#">Generar Factura</a>'.
-                                '<a class="dropdown-item" href="#">Historial de Facturas</a>'.
+                                '<a class="dropdown-item" href="agregarFactura.php">Generar Factura</a>'.
+                                '<a class="dropdown-item" href="Facturas.php">Historial de Facturas</a>'.
                             '</div>'.
                         '</li>'.
                         '<li class="nav-item dropdown">'.

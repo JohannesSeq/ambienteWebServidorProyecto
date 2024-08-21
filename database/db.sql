@@ -11,6 +11,14 @@ CREATE TABLE IF NOT EXISTS usuario(
     
 );
 
+CREATE TABLE IF NOT EXISTS clientes(
+
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50),
+    direccion VARCHAR(50),
+    telefono VARCHAR(50)
+
+)
 
 CREATE TABLE IF NOT EXISTS productos(
 
@@ -27,8 +35,8 @@ CREATE TABLE IF NOT EXISTS facturas(
     id INT AUTO_INCREMENT PRIMARY KEY,
     fecha DATE,
     monto_total INT,
-    id_usuario INT,
-    FOREIGN KEY(id_usuario) REFERENCES usuario(id)
+    id_cliente INT,
+    FOREIGN KEY(id_cliente) REFERENCES clientes(id)
 
 );
 
@@ -38,7 +46,7 @@ CREATE TABLE IF NOT EXISTS pedido(
     fecha DATE,
     estado VARCHAR(50),
     id_usuario INT,
-    FOREIGN KEY(id_usuario) REFERENCES usuario(id)
+    FOREIGN KEY(id_cliente) REFERENCES clientes(id)
 
 );
 
@@ -49,8 +57,8 @@ CREATE TABLE IF NOT EXISTS detalle_pedido(
     id_pedido INT,
     cantidad int,
     precio_total INT,
-    FOREIGN KEY(id_pedido) REFERENCES usuario(id),
-    FOREIGN KEY(id_producto) REFERENCES usuario(id)
+    FOREIGN KEY(id_pedido) REFERENCES pedido(id),
+    FOREIGN KEY(id_producto) REFERENCES productos(id)
 
 );
 
