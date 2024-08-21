@@ -41,7 +41,7 @@ $(document).ready(function(){
                         console.log(User_Array[i])
                     }
 
-                    write_cookie(User_Array[2],User_Array[4],User_Array[1]);
+                    write_cookie(User_Array[2],User_Array[3],User_Array[1]);
                     window.location.href = "../pages/index.php";
                 }
 

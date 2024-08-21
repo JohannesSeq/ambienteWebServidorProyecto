@@ -1,32 +1,27 @@
---Creacion de la base de datos.
 CREATE DATABASE IF NOT EXISTS playa_cacao_DB
 
 CREATE TABLE IF NOT EXISTS usuario(
-
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(50),
     correo VARCHAR(50),
     rol VARCHAR(25),
     user_pass VARCHAR(50)
-    
 );
 
 CREATE TABLE IF NOT EXISTS clientes(
-
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(50),
-    direccion VARCHAR(50),
+    direccion VARCHAR(200),
     telefono VARCHAR(50)
-
-)
+);
 
 CREATE TABLE IF NOT EXISTS productos(
 
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(50),
-    descripcion VARCHAR(100),
+    categoria VARCHAR(50),
     precio INT,
-    stock INT
+    cantidad INT
 
 );
 
@@ -45,7 +40,7 @@ CREATE TABLE IF NOT EXISTS pedido(
     id INT AUTO_INCREMENT PRIMARY KEY,
     fecha DATE,
     estado VARCHAR(50),
-    id_usuario INT,
+    id_cliente INT,
     FOREIGN KEY(id_cliente) REFERENCES clientes(id)
 
 );

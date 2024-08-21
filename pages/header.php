@@ -43,7 +43,7 @@
                             '</a>'.
                             '<div class="dropdown-menu" aria-labelledby="facturasDropdown">'.
                                 '<a class="dropdown-item" href="agregarFactura.php">Generar Factura</a>'.
-                                '<a class="dropdown-item" href="Facturas.php">Historial de Facturas</a>'.
+                                '<a class="dropdown-item" href="listadoFacturas.php">Historial de Facturas</a>'.
                             '</div>'.
                         '</li>'.
                         '<li class="nav-item dropdown">'.
@@ -52,11 +52,9 @@
                             'Inventario'.
                         '</a>'.
                         '<div class="dropdown-menu" aria-labelledby="inventarioDropdown">'.
-                            '<a class="dropdown-item" href="agregarFactura.php">Agregar Inventario</a>'.
-                            '<a class="dropdown-item" href="modificarFactura.php">Modificar Productos</a>'.
-                            '<a class="dropdown-item" href="mostarinventario.php">Mostrar Inventario</a>'.
-                            '<a class="dropdown-item" href="#">Dashboard de Inventario</a>'.
-                            '<a class="dropdown-item" href="#">Gestión de Pedidos</a>'.
+                            '<a class="dropdown-item" href="agregarProducto.php">Agregar producto al inventario</a>'.
+                            '<a class="dropdown-item" href="modificarProducto.php">Modificar producto del inventario</a>'.
+                            '<a class="dropdown-item" href="mostrarInventario.php">Mostrar Inventario</a>'.
                         '</div>'.
                     '</li>'.
                     '<li class="nav-item dropdown">'.
@@ -66,11 +64,26 @@
                     '</a>'.
                     '<div class="dropdown-menu" aria-labelledby="pedidosDropdown">'.
                         '<a class="dropdown-item" href="agregarPedido.php">Hacer Pedido</a>'.
-                        '<a class="dropdown-item" href="Pedidos.php">Ver Pedidos</a>'.
+                        '<a class="dropdown-item" href="mostrarPedidos.php">Ver Pedidos</a>'.
                         '<a class="dropdown-item" href="modificarPedido.php">Modificar Pedido</a>'.
                         '<a class="dropdown-item" href="eliminarPedido.php">Eliminar Pedido</a>'.
                     '</div>'.
-                '</li>';
+                '</li>'.
+                
+                '<li class="nav-item dropdown">'.
+                '<a class="nav-link dropdown-toggle" href="#" id="ClientesDropdown" role="button"'.
+                    'data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.
+                    'Clientes'.
+                '</a>'.
+                '<div class="dropdown-menu" aria-labelledby="ClientesDropdown">'.
+                    '<a class="dropdown-item" href="agregarCliente.php">Agregar cliente</a>'.
+                    '<a class="dropdown-item" href="modificarCliente.php">Modificar cliente</a>'.
+                    '<a class="dropdown-item" href="mostrarCliente.php">Mostrar clientes</a>'.
+                    '<a class="dropdown-item" href="eliminarCliente.php">Eliminar clientes</a>'.
+                '</div>'.
+            '</li>'
+                
+                ;
                     } else {
 
                         echo
