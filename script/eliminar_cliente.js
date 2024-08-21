@@ -1,13 +1,13 @@
 $(document).ready(function(){
 
-    $('#Eliminar_Producto_Form').submit(function(e){
+    $('#Eliminar_Cliente_Form').submit(function(e){
 
         e.preventDefault();
-        var id = $('#id_producto').val();
+        var id = $('#id_cliente').val();
 
         
         $.ajax({
-            url: '../php/consultar_producto.php',
+            url: '../php/consultarCliente_process.php',
             method: 'GET',
 
             data: {
@@ -19,7 +19,7 @@ $(document).ready(function(){
                 if(response != 'null'){
                     $.ajax({
 
-                        url: '../php/eliminarProducto_process.php',
+                        url: '../php/eliminarCliente_process.php',
                         method: 'POST',
             
                         data: {
@@ -27,15 +27,15 @@ $(document).ready(function(){
                         },
 
                         success: function(response){
-                            alert("Producto eliminado correctamente correctamente!");
+                            alert("Cliente eliminado correctamente correctamente!");
                             console.log(response)
-                            window.location.href = "eliminarProducto.php";
+                            window.location.href = "eliminarCliente.php";
                         }
                     });
                 } else {
 
-                    alert("El ID del producto ingresado es invalido o no existe.");
-                    window.location.href = "eliminarProducto.php";
+                    alert("El ID del cliente ingresado es invalido o no existe.");
+                    window.location.href = "eliminarCliente.php";
                     
                 }
 

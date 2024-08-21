@@ -1,13 +1,13 @@
 $(document).ready(function(){
 
-    $('#Buscar_Producto_Form').submit(function(e){
+    $('#Buscar_Cliente_Form').submit(function(e){
 
         e.preventDefault();
-        var id = $('#id_producto').val();
+        var id = $('#id_cliente').val();
 
         
         $.ajax({
-            url: '../php/consultar_producto.php',
+            url: '../php/consultarCliente_process.php',
             method: 'GET',
 
             data: {
@@ -19,42 +19,39 @@ $(document).ready(function(){
                 if(formulario != 'null'){
                     console.log(formulario)
                     $('#Modificar_Form').html(formulario);
-    
-    
+                    
                     $('#Modificar_Form').submit(function(f){
     
                         f.preventDefault();
     
-                        var nombre = $('#nombre_producto').val();
-                        var categoria = $('#categoria').val();
-                        var cantidad = $('#cantidad').val();
-                        var precio = $('#precio').val();
+                        var nombre = $('#nombre').val();
+                        var direccion = $('#direccion').val();
+                        var telefono = $('#telefono').val();
     
                         $.ajax({
     
-                            url: '../php/modificarProducto_process.php',
+                            url: '../php/modificarCliente_process.php',
                             method: 'POST',
                 
                             data: {
                                 id: id,
                                 nombre: nombre,
-                                categoria: categoria,
-                                cantidad: cantidad,
-                                precio: precio
+                                direccion: direccion,
+                                telefono: telefono,
                             },
     
                             success: function(response){
-                                alert("Producto modificado correctamente!");
+                                alert("Cliente modificado correctamente!");
                                 console.log(response)
-                                window.location.href = "modificarProducto.php";
+                                window.location.href = "modificarCliente.php";
                             }
                         });
                         
     
                     });
                 } else {
-                    alert("El ID del producto ingresado es invalido o no existe.");
-                    window.location.href = "modificarProducto.php";                    
+                    alert("El ID del cliente ingresado es invalido o no existe.");
+                    window.location.href = "modificarCliente.php";                    
                 }
 
 

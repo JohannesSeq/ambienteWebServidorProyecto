@@ -48,10 +48,10 @@
 
     <section class="cliente-form">
         <div class="container">
-            <form>
+            <form id="Agregar_Cliente_Form">
                 <div class="form-group">
-                    <label for="bomnbre_cliente">Nombre del cliente</label>
-                    <input type="text" class="form-control" id="Nomnbre_cliente" placeholder="Ingresa el nombre del cliente">
+                    <label for="nombre_cliente">Nombre del cliente</label>
+                    <input type="text" class="form-control" id="nombre_cliente" placeholder="Ingresa el nombre del cliente">
                 </div>
                 <div class="form-group">
                     <label for="telefono_cliente">Numero telefónico del cliente</label>
@@ -68,10 +68,12 @@
 
     <?php include_once 'footer.php'; ?>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../script/cookie_management.js"></script>
+    <script src="../script/agregar_cliente.js"></script>
+    
 
 </body>
 
