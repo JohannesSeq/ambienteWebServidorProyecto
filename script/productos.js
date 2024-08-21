@@ -22,7 +22,7 @@ $(document).ready(function(){
             success: function(response){
                 console.log(response)
                 alert("Prodcuto Agregado correctamente!");
-                window.location.href = "index.php";
+                window.location.href = "agregarProducto.php";
             }
         });
     });

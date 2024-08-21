@@ -55,6 +55,7 @@
                             '<a class="dropdown-item" href="agregarProducto.php">Agregar producto al inventario</a>'.
                             '<a class="dropdown-item" href="modificarProducto.php">Modificar producto del inventario</a>'.
                             '<a class="dropdown-item" href="mostrarInventario.php">Mostrar Inventario</a>'.
+                            '<a class="dropdown-item" href="eliminarProducto.php">Eliminar un producto del inventario</a>'.
                         '</div>'.
                     '</li>'.
                     '<li class="nav-item dropdown">'.

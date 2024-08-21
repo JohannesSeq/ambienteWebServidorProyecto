@@ -46,12 +46,31 @@
         </div>
     </div>
 
+
+    <section class="inventario-form">
+
+            <div class="container">
+                <form id="Buscar_Producto_Form">
+
+                    <div class="form-group">
+                        <label for="id_producto">Nombre del Producto</label>
+                        <input type="text" class="form-control" id="id_producto" placeholder="Ingresa el nombre del id del producto a modificar.">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Consultar producto</button>
+                </form>
+
+                <form id="Modificar_Form"></form>
+            </div>
+            
+        </section>
+
     <?php include_once 'footer.php'; ?>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../script/cookie_management.js"></script>
+    <script src="../script/modificar_productos.js"></script>
 
 </body>
 
