@@ -53,9 +53,8 @@
                 $query = "SELECT * FROM clientes";
                 $clientes = '';
                 $result = $conn->query($query);
-                $Validation = $result->fetch_assoc();
 
-                if($Validation != null){
+                if($result != null){
 
                     $clientes = 
                     '<table class="table">'.
@@ -66,7 +65,8 @@
                         '<th scope="col">direccion</th>'.
                 '</tr>'.
                 '</thead>'.
-                '<tbody>';
+                '<tbody>'
+                ;
 
                     while ($row = $result->fetch_assoc()) {
 

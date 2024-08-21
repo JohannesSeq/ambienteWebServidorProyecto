@@ -10,7 +10,6 @@
     $stmt->execute();
 
     $result = $stmt->get_result();
-    
     $clientes = $result->fetch_assoc();
     $formulario = '';
 
@@ -26,7 +25,7 @@
         '</div>'.
         '<div class="form-group">'.
             '<label for="direccion">Dirección del cliente</label>'.
-            '<input type="text" class="form-control" id="telefono" value="'.$clientes['direccion'].'"></textarea>'.
+            '<input type="text" class="form-control" id="direccion" value="'.$clientes['direccion'].'">'.
         '</div>'.
         '<button type="submit" class="btn btn-primary">Modificar cliente</button>';
     

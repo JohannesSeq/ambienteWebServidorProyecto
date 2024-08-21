@@ -56,7 +56,8 @@
                 
                 if($result != null){
 
-                    $productos = '<table class="table">'.
+                    $productos = 
+                    '<table class="table">'.
                     
                     '<tr>'.
                         '<th scope="col">id</th>'.
