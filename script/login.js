@@ -47,7 +47,7 @@ $(document).ready(function(){
                         console.log(User_Array[i])
                     }
 
-                    write_cookie(User_Array[2],User_Array[4]);
+                    write_cookie(User_Array[2],User_Array[4],User_Array[1]);
                     window.location.href = "../index.php";
                 }
 
@@ -64,15 +64,18 @@ function escribir_error(){
     paragraph.textContent = 'Usuario o contraseña incorrectos';
 }
 
-function write_cookie(email,rol){
+function write_cookie(email,rol,nombre){
     document.cookie = "email=  ; path=/";
     document.cookie = "rol=  ; path=/";
+    document.cookie = "nombre=  ; path=/";
 
     document.cookie = "email" + "=" + email + ";" + "path=/" + ";";
     document.cookie = "rol" + "=" + rol + ";" + "path=/" + ";";
+    document.cookie = "nombre" + "=" + nombre + ";" + "path=/" + ";";
 }
 
 function clear_cookie(){
     document.cookie = "email= ; path=/";
     document.cookie = "rol= ; path=/";
+    document.cookie = "nombre=  ; path=/";
 }
