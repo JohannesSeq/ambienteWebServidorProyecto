@@ -29,7 +29,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="fetchOrders()">
     <?php include_once 'header.php'; ?>
 
     <div class="container-fluid mt-3">
@@ -61,12 +61,56 @@
         </div>
     </section>
 
-    <?php include_once 'footer.php'; ?>
+    <!-- Modal for modifying the order -->
+    <div class="modal fade" id="modifyOrderModal" tabindex="-1" role="dialog" aria-labelledby="modifyOrderModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modifyOrderModalLabel">Modificar Pedido</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="modifyOrderForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="direccion">Dirección</label>
+                            <input type="text" class="form-control" name="direccion" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="text" class="form-control" name="telefono" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="detalles">Detalles del Pedido</label>
+                            <textarea class="form-control" name="detalles" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="estado">Estado</label>
+                            <select class="form-control" name="estado" required>
+                                <option value="Pendiente">Pendiente</option>
+                                <option value="En Proceso">En Proceso</option>
+                                <option value="Completado">Completado</option>
+                                <option value="Cancelado">Cancelado</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <?php include_once 'footer.php'; ?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="../script/pedidoController.js"></script> <!-- Ensure this script contains logic to fetch and update data -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../script/pedidoController.js"></script>
 </body>
 </html>
