@@ -105,7 +105,7 @@
 
     <section class="pedido-form">
         <div class="container">
-            <form>
+            <form id="Agregar_Pedido_Form">
                 <div class="form-group">
                     <label for="nombre">Nombre Completo</label>
                     <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre completo">
@@ -138,9 +138,11 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../script/pedidoController.js"></script>
 
 </body>
 
