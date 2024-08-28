@@ -29,19 +29,23 @@ $(document).ready(function () {
         var pedidoId = $(this).data('id');
 
         $.ajax({
-            url: '../PHP/consultarPedidos_Process.php',
+            url: '../PHP/consultarPedidoPorID_Process.php', // Use the new process file
             method: 'GET',
             data: { id: pedidoId },
             success: function (pedido) {
                 var pedido = JSON.parse(pedido);
-                $('#modifyOrderModal input[name="nombre"]').val(pedido.Nombre_cliente);
-                $('#modifyOrderModal input[name="direccion"]').val(pedido.Direcion_entrega);
-                $('#modifyOrderModal input[name="telefono"]').val(pedido.telefono);
-                $('#modifyOrderModal textarea[name="detalles"]').val(pedido.Detalle_pedido);
-                $('#modifyOrderModal select[name="estado"]').val(pedido.estado);
-                $('#modifyOrderModal').data('id', pedidoId);
+                if (pedido.error) {
+                    alert(pedido.error);
+                } else {
+                    $('#modifyOrderModal input[name="nombre"]').val(pedido.Nombre_cliente);
+                    $('#modifyOrderModal input[name="direccion"]').val(pedido.Direcion_entrega);
+                    $('#modifyOrderModal input[name="telefono"]').val(pedido.telefono);
+                    $('#modifyOrderModal textarea[name="detalles"]').val(pedido.Detalle_pedido);
+                    $('#modifyOrderModal select[name="estado"]').val(pedido.estado);
+                    $('#modifyOrderModal').data('id', pedidoId);
 
-                $('#modifyOrderModal').modal('show');
+                    $('#modifyOrderModal').modal('show');
+                }
             },
             error: function (error) {
                 console.error('Error fetching order details:', error);
@@ -66,6 +70,8 @@ $(document).ready(function () {
                     fetchOrders(); 
                 } else {
                     alert('Error actualizando el pedido');
+                    console.error(response);
+                    alert(response);
                 }
             },
             error: function (error) {
