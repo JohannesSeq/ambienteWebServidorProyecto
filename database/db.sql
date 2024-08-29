@@ -68,11 +68,11 @@ CREATE TABLE `pedido` (
 --
 
 INSERT INTO `pedido` (`id`, `fecha`, `estado`, `Nombre_cliente`, `telefono`, `Detalle_pedido`, `Direcion_entrega`) VALUES
-(1, '2024-08-28', 'pendiente', 'Steven el guerrero dragon', 234234, 'Stevbe', '32132'),
-(2, '2024-08-28', 'pendiente', 'Steven3', 234234, 'wfawfawf', 'sefesf'),
-(3, '2024-08-28', 'pendiente', 'Steven3', 234234, 'wfawfawf', 'sefesf'),
-(4, '2024-08-28', 'pendiente', 'Steven4 ', 234234, 'rwrw3r3w', '32132'),
-(5, '2024-08-28', 'pendiente', 'Jorge', 234234, 'sesefsefe', '32132');
+(1, '2024-08-28', 'pendiente', 'Luis', 234234, 'Pollo', 'Calle 1'),
+(2, '2024-08-28', 'pendiente', 'Mario', 234234, 'Hamburguesa', 'Calle 2'),
+(3, '2024-08-28', 'pendiente', 'Jorge', 234234, 'Papas', 'Calle 3'),
+(4, '2024-08-28', 'pendiente', 'Maria ', 234234, 'Paella', 'Calle 4'),
+(5, '2024-08-28', 'pendiente', 'Valeria', 234234, 'Arroz con Mariscos', 'Calle 5');
 
 -- --------------------------------------------------------
 
