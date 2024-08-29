@@ -18,9 +18,10 @@ $(document).ready(function () {
             },
 
             success: function (response) {
-                dispararAlertaExito("Pedido agregado correctamente").then(() => {
-                    location.reload();
+                dispararAlertaExito("Pedido agregado correctamente").then(() => {       
+                        
                 });
+                location.reload();  
             }
         });
     });
@@ -143,5 +144,25 @@ function fetchOrders() {
         error: function (error) {
             console.error('Error fetching orders:', error);
         }
+    });
+}
+
+function dispararAlertaExito(mensaje) {
+    Swal.fire({
+        icon: "success",
+        title: mensaje,
+        confirmButtonText: 'Ok'
+    }).then(() => {
+        location.reload();  
+    });
+}
+
+function dispararAlertaError(mensaje) {
+    Swal.fire({
+        icon: "error",
+        title: mensaje,
+        confirmButtonText: 'Ok'
+      }).then(() => {
+        location.reload();
     });
 }
