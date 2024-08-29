@@ -92,10 +92,6 @@ CREATE TABLE `productos` (
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`id`, `nombre`, `categoria`, `precio`, `cantidad`) VALUES
-(1, 'JohannesPerra', NULL, NULL, NULL),
-(2, 'sefsef', NULL, NULL, NULL);
-
 -- --------------------------------------------------------
 
 --

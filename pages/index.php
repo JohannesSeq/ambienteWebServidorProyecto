@@ -67,7 +67,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Servicio 1">
+                            <img src="../img/img1.jpg" class="card-img-top" alt="Servicio 1">
                             <div class="card-body">
                                 <h5 class="card-title">Servicio de Catering</h5>
                                 <p class="card-text">Ofrecemos servicios de catering para eventos especiales, asegurando una experiencia gastronómica inolvidable para tus invitados.</p>
@@ -76,7 +76,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Servicio 2">
+                            <img src="../img/img2.jfif" class="card-img-top" alt="Servicio 2">
                             <div class="card-body">
                                 <h5 class="card-title">Clases de Cocina</h5>
                                 <p class="card-text">Únete a nuestras clases de cocina y aprende a preparar platillos exquisitos de la mano de nuestros chefs profesionales.</p>
@@ -85,7 +85,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Servicio 3">
+                            <img src="../img/img3.jpg" class="card-img-top" alt="Servicio 3">
                             <div class="card-body">
                                 <h5 class="card-title">Entregas a Domicilio</h5>
                                 <p class="card-text">Disfruta de tus platillos favoritos sin salir de casa con nuestro eficiente servicio de entrega a domicilio.</p>
