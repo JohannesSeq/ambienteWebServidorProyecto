@@ -66,23 +66,11 @@
                     '</a>'.
                     '<div class="dropdown-menu" aria-labelledby="pedidosDropdown">'.
                         '<a class="dropdown-item" href="agregarPedido.php">Hacer Pedido</a>'.
-                        '<a class="dropdown-item" href="mostrarPedidos.php">Ver Pedidos</a>'.
-                        '<a class="dropdown-item" href="modificarPedido.php">Modificar Pedido</a>'.
-                        '<a class="dropdown-item" href="eliminarPedido.php">Eliminar Pedido</a>'.
+                        '<a class="dropdown-item" href="modificarPedido.php">Gestionar Pedidos</a>'.
                     '</div>'.
                 '</li>'.
                 
-                '<li class="nav-item dropdown">'.
-                '<a class="nav-link dropdown-toggle" href="#" id="ClientesDropdown" role="button"'.
-                    'data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.
-                    'Clientes'.
-                '</a>'.
-                '<div class="dropdown-menu" aria-labelledby="ClientesDropdown">'.
-                    '<a class="dropdown-item" href="agregarCliente.php">Agregar cliente</a>'.
-                    '<a class="dropdown-item" href="modificarCliente.php">Modificar cliente</a>'.
-                    '<a class="dropdown-item" href="mostrarCliente.php">Mostrar clientes</a>'.
-                    '<a class="dropdown-item" href="eliminarCliente.php">Eliminar clientes</a>'.
-                '</div>'.
+                
             '</li>'
                 
                 ;
@@ -112,9 +100,7 @@
                                 '</a>'.
                                 '<div class="dropdown-menu" aria-labelledby="PersonalDropdown">'.
                                     '<a class="dropdown-item" href="agregarUsuario.php">Agregar Usuario</a>'.
-                                    '<a class="dropdown-item" href="modificarUsuario.php">Modificar Usuario</a>'.
-                                    '<a class="dropdown-item" href="mostrarUsuarios.php">Mostrar Usuarios</a>'.
-                                    '<a class="dropdown-item" href="EliminarUsuarios.php">Eliminar Usuario</a>'.
+                                    '<a class="dropdown-item" href="modificarUsuario.php">Gestionar Usuarios</a>'.                              
                                 '</div>'.
                             '</li>';
                         }
