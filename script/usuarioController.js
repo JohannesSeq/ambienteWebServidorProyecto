@@ -1,14 +1,16 @@
 $(document).ready(function () {
+    // Llama a la función para cargar los usuarios al cargar la página
     fetchUsuarios();
-
+ // Manejador del evento de envío del formulario de agregar usuario
     $('#Agregar_Usuario_Form').submit(function (e) {
-        e.preventDefault();
+        e.preventDefault();// Previene el comportamiento por defecto del formulario (recarga de página)
 
+// Obtiene los valores de los campos del formulario
         let nombre = $('#nombre').val();
         let email = $('#email').val();
         let rol = $('#rol').val();
         let password = $('#password').val();
-
+// Realiza una petición AJAX para enviar los datos a AgregarUsuario_Process.php
         $.ajax({
             url: '../PHP/AgregarUsuario_Process.php',
             method: 'POST',
@@ -23,54 +25,55 @@ $(document).ready(function () {
                 location.reload();
             },
             error: function (error) {
-                console.error("Error registrando usuario:", error);
+                console.error("Error registrando usuario:", error);// Muestra el error en la consola
             }
         });
     });
-
+// Manejador para el botón de modificar usuario
     $(document).on('click', '.btn-modify', function () {
-        var usuarioId = $(this).data('id');
-
+        var usuarioId = $(this).data('id'); // Obtiene el ID del usuario a modificar
+// Realiza una petición AJAX para obtener los datos del usuario según su ID
         $.ajax({
             url: '../PHP/consultarUsuarioPorID_Process.php',
             method: 'GET',
             data: { id: usuarioId },
             success: function (usuario) {
-                var usuario = JSON.parse(usuario);
+                var usuario = JSON.parse(usuario); // Parse la respuesta JSON
                 if (usuario.error) {
-                    alert(usuario.error);
-                } else {
+                    alert(usuario.error); // Muestra un error si la respuesta contiene uno
+                } else { // Rellena el formulario modal con los datos del usuario
                     $('#modifyUserModal input[name="nombre"]').val(usuario.nombre);
                     $('#modifyUserModal input[name="email"]').val(usuario.correo);
                     $('#modifyUserModal').data('id', usuarioId);
-                    $('#modifyUserModal').modal('show');
+                    $('#modifyUserModal').modal('show'); // Muestra el modal para modificar usuario
                 }
             },
             error: function (error) {
-                console.error('Error fetching user details:', error);
+                console.error('Error fetching user details:', error); // Muestra el error en la consola
             }
         });
     });
-
+// Manejador para el envío del formulario de modificar usuario
     $('#modifyUserForm').on('submit', function (e) {
-        e.preventDefault();
+        e.preventDefault(); // Previene el comportamiento por defecto del formulario
 
-        var usuarioId = $('#modifyUserModal').data('id');
-        var formData = $(this).serialize() + '&id=' + usuarioId;
+        var usuarioId = $('#modifyUserModal').data('id'); // Obtiene el ID del usuario a modificar
+        var formData = $(this).serialize() + '&id=' + usuarioId; // Serializa los datos del formulario y añade el ID
 
+        // Realiza una petición AJAX para actualizar los datos del usuario
         $.ajax({
             url: '../PHP/ModificarUsuario_Process.php',
             method: 'POST',
             data: formData,
             success: function (response) {
                 if (response.includes("éxito")) {
-                    alert('Usuario actualizado correctamente');
-                    $('#modifyUserModal').modal('hide');
-                    fetchUsuarios();
+                    alert('Usuario actualizado correctamente'); // Muestra un mensaje de éxito
+                    $('#modifyUserModal').modal('hide'); // Oculta el modal
+                    fetchUsuarios(); // Recarga la lista de usuarios
                 } else {
-                    alert('Error actualizando el usuario');
-                    console.error(response);
-                    alert(response);
+                    alert('Error actualizando el usuario'); // Muestra un mensaje de error
+                    console.error(response); // Muestra el error en la consola
+                    alert(response); // Muestra la respuesta en un alert
                 }
             },
             error: function (error) {
@@ -78,10 +81,11 @@ $(document).ready(function () {
             }
         });
     });
-
+// Manejador para el botón de eliminar usuario
     $(document).on('click', '.btn-delete', function () {
-        var usuarioId = $(this).data('id');
+        var usuarioId = $(this).data('id');// Obtiene el ID del usuario a eliminar
 
+        // Muestra una alerta de confirmación usando SweetAlert2
         Swal.fire({
             title: '¿Estás seguro?',
             text: "No podrás revertir esta acción!",
@@ -92,6 +96,7 @@ $(document).ready(function () {
             confirmButtonText: 'Sí, eliminarlo!'
         }).then((result) => {
             if (result.isConfirmed) {
+                // Si el usuario confirma, realiza una petición AJAX para eliminar el usuario
                 $.ajax({
                     url: '../PHP/eliminarUsuario_Process.php',
                     method: 'POST',
@@ -99,7 +104,7 @@ $(document).ready(function () {
                     success: function (response) {
                         if (response.includes("éxito")) {
                             Swal.fire('Eliminado!', 'El usuario ha sido eliminado.', 'success');
-                            fetchUsuarios();
+                            fetchUsuarios(); // Recarga la lista de usuarios
                         } else {
                             Swal.fire('Error', 'No se pudo eliminar el usuario.', 'error');
                         }
@@ -112,15 +117,15 @@ $(document).ready(function () {
         });
     });
 });
-
+// Función para cargar la lista de usuarios desde el servidor
 function fetchUsuarios() {
     $.ajax({
         url: '../PHP/consultarUsuarios_Process.php',
         method: 'GET',
         success: function (data) {
-            var usuarios = JSON.parse(data);
+            var usuarios = JSON.parse(data); // Parse la respuesta JSON
             var tbody = $('#usuariosTable tbody');
-            tbody.empty();
+            tbody.empty(); // Limpia la tabla antes de añadir nuevos datos
 
             usuarios.forEach(function (usuario) {
                 var row = `<tr>
@@ -133,11 +138,11 @@ function fetchUsuarios() {
                         <button class="btn btn-danger btn-delete" data-id="${usuario.id}">Eliminar</button>
                     </td>
                 </tr>`;
-                tbody.append(row);
+                tbody.append(row); // Añade la fila a la tabla
             });
         },
         error: function (error) {
-            console.error('Error fetching users:', error);
+            console.error('Error fetching users:', error); // Muestra el error en la consola
         }
     });
 }
