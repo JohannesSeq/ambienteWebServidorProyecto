@@ -35,9 +35,9 @@
     </style>
 </head>
 
-<body>
+<body onload = "Check_Permissions('Vendedor')" >
     <?php include_once 'header.php'; ?>
-    <body onload = "Check_Permissions('Vendedor')" >
+    
 
     <div class="container-fluid mt-3">
         <div class="jumbotron">

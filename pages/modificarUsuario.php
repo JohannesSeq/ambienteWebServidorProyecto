@@ -35,7 +35,8 @@
     </style>
 </head>
 
-<body onload="fetchUsuarios()">
+<body onload="Check_Permissions('Vendedor');fetchUsuarios()">
+    
     <?php include_once 'header.php'; ?>
 
     <div class="container-fluid mt-3">
@@ -59,13 +60,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Rows will be populated dynamically by JavaScript -->
+                    <!-- Las tablas seran modificadas por JS-->
                 </tbody>
             </table>
         </div>
     </section>
 
-    <!-- Modal for modifying the user -->
     <div class="modal fade" id="modifyUserModal" tabindex="-1" role="dialog" aria-labelledby="modifyUserModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -111,7 +111,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../script/cookie_management.js"></script>
     <script src="../script/usuarioController.js"></script>
+    <script src="../script/permissions.js"></script>
+
 </body>
 
 </html>

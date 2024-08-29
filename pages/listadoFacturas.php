@@ -35,8 +35,9 @@
     </style>
 </head>
 
-<body>
-    <?php include_once 'header.php'; ?>
+
+<?php include_once 'header.php'; ?>
+    <body onload = "Check_Permissions('Vendedor')" ></body>
 
     <div class="container-fluid mt-3">
         <div class="jumbotron">
@@ -77,6 +78,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script> <!-- Added jsPDF library -->
     <script src="../script/facturaController.js"></script>
+    <script src="../script/permissions.js"></script>
+    <script src="../script/cookie_management.js"></script>
 </body>
 
 </html>

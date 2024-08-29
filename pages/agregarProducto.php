@@ -35,7 +35,6 @@
         </style>
     </head>
 
-    <body>
     <body onload = "Check_Permissions('Vendedor')" >
         <?php include_once 'header.php'; ?>
 

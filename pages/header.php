@@ -83,8 +83,7 @@
                             'Pedidos'.
                         '</a>'.
                         '<div class="dropdown-menu" aria-labelledby="pedidosDropdown">'.
-                            '<a class="dropdown-item" href="#">Hacer Pedido</a>'.
-                            '<a class="dropdown-item" href="#">Modificar Pedido</a>'.
+                            '<a class="dropdown-item" href="agregarPedido.php">Hacer Pedido</a>'.
                         '</div>'.
                     '</li>';
                     }

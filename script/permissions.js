@@ -1,7 +1,9 @@
 function Check_Permissions(rol_minimo) {
 
+    console.log('Prueba');
     console.log(leer_cookie('rol'));
     console.log(valor_rol(rol_minimo));
+    console.log(valor_rol(leer_cookie('rol')));
     
     if(valor_rol(rol_minimo) > valor_rol(leer_cookie('rol'))){
         window.location.href = "unauthorized.php";

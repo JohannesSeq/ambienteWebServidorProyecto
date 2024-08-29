@@ -35,7 +35,7 @@
         </style>
     </head>
 
-    <body>
+    <body onload = "Check_Permissions('Vendedor')" >
         <?php include_once 'header.php'; ?>
 
         <div class="container-fluid mt-3">
@@ -70,6 +70,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="../script/cookie_management.js"></script>
         <script src="../script/eliminar_cliente.js"></script>
+        <script src="../script/permissions.js"></script>
 
     </body>
 
