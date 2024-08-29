@@ -14,8 +14,8 @@
 
     <div class="container-fluid mt-3">
         <div class="jumbotron">
-            <h1 class="display-4">Modificar Usuarios</h1>
-            <p class="lead">Actualiza los detalles de los usuarios existentes.</p>
+            <h1 class="display-4">Agregar Usuario</h1>
+            <p class="lead">Agrege un usuario al sistema.</p>
             <hr class="my-4">
         </div>
     </div>
@@ -41,8 +41,8 @@
             <div class="form-group">
                 <label for="rol">Rol</label>
                 <select class="form-control" id="rol" name="rol" required>
-                    <option value="cliente">Cliente</option>
-                    <option value="vendedor">Vendedor</option>
+                    <option value="Cliente">Cliente</option>
+                    <option value="Vendedor">Vendedor</option>
                     <option value="Gerente">Gerente</option>
                 </select>
             </div>

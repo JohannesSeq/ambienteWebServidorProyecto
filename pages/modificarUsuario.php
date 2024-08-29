@@ -93,9 +93,9 @@
                         <div class="form-group">
                             <label for="rol">Rol</label>
                             <select class="form-control" name="rol" required>
-                                <option value="cliente">Cliente</option>
-                                <option value="vendedor">Vendedor</option>
-                                <option value="gerente">Gerente</option>
+                                <option value="Cliente">Cliente</option>
+                                <option value="Vendedor">Vendedor</option>
+                                <option value="Gerente">Gerente</option>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Guardar cambios</button>

@@ -6,7 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST['nombre'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $rol = $_POST['rol']; // New field for role
+    $rol = $_POST['rol'];
+    $Cifrado = password_hash($password, PASSWORD_DEFAULT);
 
     $stmt = $conn->prepare("UPDATE usuario SET nombre = ?, correo = ?, user_pass = ?, rol = ? WHERE id = ?");
 
@@ -14,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die('Error preparing the statement: ' . $conn->error);
     }
 
-    $stmt->bind_param("ssssi", $nombre, $email, $password, $rol, $id);
+    $stmt->bind_param("ssssi", $nombre, $email, $Cifrado, $rol, $id);
 
     $stmt->execute();
 

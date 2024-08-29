@@ -20,6 +20,7 @@ $(document).ready(function () {
             },
             success: function (response) {
                 alert("Usuario registrado correctamente");
+                console.log(response)
                 location.reload();
             },
             error: function (error) {
