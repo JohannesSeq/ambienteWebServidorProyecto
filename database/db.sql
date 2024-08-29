@@ -103,17 +103,17 @@ CREATE TABLE `usuario` (
   `nombre` varchar(50) DEFAULT NULL,
   `correo` varchar(50) DEFAULT NULL,
   `rol` varchar(25) DEFAULT NULL,
-  `user_pass` varchar(50) DEFAULT NULL
+  `user_pass` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `usuario`
---
+-- La password para los usuarios es pass123
 
 INSERT INTO `usuario` (`id`, `nombre`, `correo`, `rol`, `user_pass`) VALUES
-(1, 'Johannes', 'johannes@playacacao.com', 'Gerente', 'pass123'),
-(2, 'Adrian', 'adrian@playacacao.com', 'vendedor', 'pass123'),
-(3, 'steven', 'steven@playacacao.com', 'cliente', 'pass123');
+(1, 'Johannes', 'johannes@playacacao.com', 'Gerente', '$2y$10$vJ1NEQddSA9IfPpBDzoiquyx5z/ogerayTsHtXPhjolS5ZkSWCWhe'),
+(2, 'Adrian', 'adrian@playacacao.com', 'vendedor', '$2y$10$vJ1NEQddSA9IfPpBDzoiquyx5z/ogerayTsHtXPhjolS5ZkSWCWhe'),
+(3, 'steven', 'steven@playacacao.com', 'cliente', '$2y$10$vJ1NEQddSA9IfPpBDzoiquyx5z/ogerayTsHtXPhjolS5ZkSWCWhe');
 
 --
 -- Índices para tablas volcadas

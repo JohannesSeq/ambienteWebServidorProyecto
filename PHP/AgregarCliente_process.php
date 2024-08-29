@@ -1,6 +1,6 @@
 <?php
-    include('connection.php');
-
+    include("db.php");
+    
     $nombre = $_POST['nombre'];
     $telefono = $_POST['telefono'];
     $direccion = $_POST['direccion'];

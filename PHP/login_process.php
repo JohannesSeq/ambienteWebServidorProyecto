@@ -5,16 +5,40 @@ include('connection.php');
 $correo = $_GET['correo'];
 $user_pass = $_GET['user_pass'];
 
-$stmt = $conn->prepare("SELECT * FROM usuario WHERE correo = ? AND user_pass = ?");
+$usuarioOutput = '';
 
-$stmt->bind_param("ss", $correo, $user_pass);
+$stmt = $conn->prepare("SELECT * FROM usuario WHERE correo = ?");
+
+$stmt->bind_param("s", $correo);
 $stmt->execute();
 
 $result = $stmt->get_result();
-$task = $result->fetch_assoc();
 
-echo json_encode($task);
+$UsuarioArray = $result->fetch_assoc();
+
+if($UsuarioArray['correo'] != null){
+
+    if($UsuarioArray['correo'] == $correo){
+        if(password_verify($user_pass,$UsuarioArray['user_pass'])){
+
+            setcookie('email', $UsuarioArray['correo'], time() + 3600, '/');
+            setcookie('rol', $UsuarioArray['rol'], time() + 3600, '/');
+            setcookie('nombre', $UsuarioArray['nombre'], time() + 3600, '/');
+
+            $usuarioOutput = 'Success';
+        }
+    }    
+
+} else {
+    setcookie('email', '', time() + 3600, '/');
+    setcookie('rol', '', time() + 3600, '/');
+    setcookie('nombre', '', time() + 3600, '/');
+    $usuarioOutput = 'Failure';
+}
+
+echo $usuarioOutput;
 
 $stmt->close();
 $conn->close();
+
 ?>

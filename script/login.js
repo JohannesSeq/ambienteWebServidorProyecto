@@ -1,12 +1,11 @@
 $(document).ready(function(){
     
     $('#formulario_login').submit(function(e){
-        //var errortext = document.getElementById('#error_text');
         e.preventDefault();
 
         //Variables obtenidas del formulario de login.
-        var correo = $('#email_field').val();
-        var user_pass = $('#password_field').val();
+        let correo = $('#email_field').val();
+        let user_pass = $('#password_field').val();
 
         $.ajax({
             
@@ -20,28 +19,15 @@ $(document).ready(function(){
             success: function(response){
 
 
-                if(response.startsWith('null')){
-                    clear_cookie();
-                    escribir_error();
-                } else {
+                if(response.startsWith('Success')){
 
-                    var RawResponse = '';
-                    RawResponse = response.slice(1, response.length - 1)
-                    var User_Array = RawResponse.split(",");
-                    
-                    for (let i = 0; i < User_Array.length; i++){
 
-                        User_Array[i] = User_Array[i].slice(User_Array[i].indexOf(':') + 1, User_Array[i].length);
-                        
-                        if(User_Array[i].startsWith('"')){
-                            User_Array[i] = User_Array[i].slice(1, User_Array[i].length - 1);
-                        }
-
-                        console.log(User_Array[i])
-                    }
-
-                    write_cookie(User_Array[2],User_Array[3],User_Array[1]);
+                    console.log("Usuario logueado")
                     window.location.href = "index.php";
+
+                } else {
+                    //clear_cookie();
+                    escribir_error();
                 }
 
             }
@@ -52,7 +38,7 @@ $(document).ready(function(){
 });
 
 function escribir_error(){
-    var paragraph = document.getElementById("error_text");
+    let paragraph = document.getElementById("error_text");
     paragraph.textContent = 'Usuario o contraseña incorrectos';
 }
 
