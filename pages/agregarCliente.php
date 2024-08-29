@@ -37,6 +37,7 @@
 
 <body>
     <?php include_once 'header.php'; ?>
+    <body onload = "Check_Permissions('Vendedor')" >
 
     <div class="container-fluid mt-3">
         <div class="jumbotron">
@@ -73,6 +74,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../script/cookie_management.js"></script>
     <script src="../script/agregar_cliente.js"></script>
+    <script src="../script/permissions.js"></script>
     
 
 </body>

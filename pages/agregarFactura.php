@@ -36,6 +36,8 @@
 </head>
 
 <body>
+    <body onload = "Check_Permissions('Vendedor')" >
+
     <?php include_once 'header.php'; ?>
 
     <div class="container-fluid mt-3">
@@ -110,6 +112,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="module" src="../script/facturaController.js"></script>
+    <script src="../script/permissions.js"></script>
 </body>
 
 </html>

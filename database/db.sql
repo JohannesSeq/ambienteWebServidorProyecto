@@ -112,8 +112,8 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id`, `nombre`, `correo`, `rol`, `user_pass`) VALUES
 (1, 'Johannes', 'johannes@playacacao.com', 'Gerente', '$2y$10$vJ1NEQddSA9IfPpBDzoiquyx5z/ogerayTsHtXPhjolS5ZkSWCWhe'),
-(2, 'Adrian', 'adrian@playacacao.com', 'vendedor', '$2y$10$vJ1NEQddSA9IfPpBDzoiquyx5z/ogerayTsHtXPhjolS5ZkSWCWhe'),
-(3, 'steven', 'steven@playacacao.com', 'cliente', '$2y$10$vJ1NEQddSA9IfPpBDzoiquyx5z/ogerayTsHtXPhjolS5ZkSWCWhe');
+(2, 'Adrian', 'adrian@playacacao.com', 'Vendedor', '$2y$10$vJ1NEQddSA9IfPpBDzoiquyx5z/ogerayTsHtXPhjolS5ZkSWCWhe'),
+(3, 'steven', 'steven@playacacao.com', 'Cliente', '$2y$10$vJ1NEQddSA9IfPpBDzoiquyx5z/ogerayTsHtXPhjolS5ZkSWCWhe');
 
 --
 -- Índices para tablas volcadas
