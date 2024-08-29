@@ -41,48 +41,75 @@
     <div class="container-fluid mt-3">
         <div class="jumbotron">
             <h1 class="display-4">Generar Factura</h1>
-            <p class="lead">Crea una factura para tu pedido.</p>
+            <p class="lead">Selecciona un pedido para generar la factura.</p>
             <hr class="my-4">
         </div>
     </div>
 
-    <section class="factura-form">
+    <section class="pedido-list">
         <div class="container">
+            <h2>Pedidos</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Cliente</th>
+                        <th>Detalles</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="pedidoList">
+                    <!-- Pedidos will be loaded here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="factura-form" style="display: none;">
+        <div class="container">
+            <button type="button" class="btn btn-secondary mb-3" id="backToPedidoList">&larr; Volver a Pedidos</button>
+
             <form id="formAgregarFactura">
+                <input type="hidden" id="pedidoID" name="pedidoID">
+
                 <div class="form-group">
                     <label for="nombreCliente">Nombre del Cliente</label>
-                    <input type="text" class="form-control" id="nombreCliente" placeholder="Ingresa el nombre del cliente">
+                    <input type="text" class="form-control" id="nombreCliente" name="nombreCliente" readonly>
                 </div>
+
                 <div class="form-group">
                     <label for="direccionCliente">Dirección del Cliente</label>
-                    <input type="text" class="form-control" id="direccionCliente" placeholder="Ingresa la dirección del cliente">
+                    <input type="text" class="form-control" id="direccionCliente" name="direccionCliente" readonly>
                 </div>
+
                 <div class="form-group">
                     <label for="telefonoCliente">Teléfono del Cliente</label>
-                    <input type="tel" class="form-control" id="telefonoCliente" placeholder="Ingresa el número de teléfono del cliente">
+                    <input type="tel" class="form-control" id="telefonoCliente" name="telefonoCliente" readonly>
                 </div>
+
                 <div class="form-group">
                     <label for="detallesPedido">Detalles del Pedido</label>
-                    <textarea class="form-control" id="detallesPedido" rows="5" placeholder="Describe los detalles del pedido"></textarea>
+                    <textarea class="form-control" id="detallesPedido" name="detallesPedido" rows="5" readonly></textarea>
                 </div>
+
                 <div class="form-group">
-                    <label for="total">Total a Pagar</label>
-                    <input type="number" class="form-control" id="total" placeholder="Ingresa el total a pagar">
+                    <label for="montoTotal">Monto Total</label>
+                    <input type="number" class="form-control" id="montoTotal" name="montoTotal"
+                        placeholder="Ingresa el monto total a pagar" required>
                 </div>
+
                 <button type="submit" class="btn btn-primary">Generar Factura</button>
             </form>
         </div>
     </section>
 
-    <?php include_once 'footer.php'; ?>   
+    <?php include_once 'footer.php'; ?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../script/cookie_management.js"></script>
     <script type="module" src="../script/facturaController.js"></script>
-
 </body>
 
 </html>

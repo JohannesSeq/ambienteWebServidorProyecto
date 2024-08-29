@@ -7,11 +7,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST['nombre'];
     $direccion = $_POST['direccion'];
     $telefono = $_POST['telefono'];
-    $Detallespedido = $_POST['Detallespedido'];
-    $estado =  $_POST['estado'];
+    $detalles = $_POST['detalles'];
+    $estado = $_POST['estado'];
 
-    $stmt = $conn->prepare("UPDATE clientes SET nombre = ?, telefono = ?, direccion = ?, Detalle_pedido = ?, estado = ? WHERE id = ?");
-    $stmt->bind_param("sssssi", $nombre, $telefono, $direccion, $Detallespedido, $estado, $id);
+    // Prepare the SQL statement with the correct table name 'pedido'
+    $stmt = $conn->prepare("UPDATE pedido SET Nombre_cliente = ?, telefono = ?, Direcion_entrega = ?, Detalle_pedido = ?, estado = ? WHERE id = ?");
+
+    // Check if the statement was prepared successfully
+    if ($stmt === false) {
+        // Output the error message
+        die('Error preparing the statement: ' . $conn->error);
+    }
+
+    // Bind the parameters
+    $stmt->bind_param("sisssi", $nombre, $telefono, $direccion, $detalles, $estado, $id);
+
+    // Execute the statement
     $stmt->execute();
 
     // Check for successful update
